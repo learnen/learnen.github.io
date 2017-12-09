@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="唯一的世界">
 <meta property="og:description" content="前言 在电脑程序中，cpu会同时执行多个进程，也就是所谓的程序，线程是程序的执行单元，一个线程可以有多个进程。ps 说了这么多都是废话  一、 如何创建一个线程 1  可以创建一个Thread的子类(如：HelloThread)，然后通过下面这种方法创建一个线程对象  1Thread thread = new HelloThread();    2  创建一个Runnable的实现类(如：Hell">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-08T14:01:30.555Z">
+<meta property="og:updated_time" content="2017-12-09T02:13:43.758Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 线程">
 <meta name="twitter:description" content="前言 在电脑程序中，cpu会同时执行多个进程，也就是所谓的程序，线程是程序的执行单元，一个线程可以有多个进程。ps 说了这么多都是废话  一、 如何创建一个线程 1  可以创建一个Thread的子类(如：HelloThread)，然后通过下面这种方法创建一个线程对象  1Thread thread = new HelloThread();    2  创建一个Runnable的实现类(如：Hell">
@@ -353,6 +353,7 @@
 <li>2<br>  创建一个Runnable的实现类(如：HelloRunnable),就样也可以创建一个线程对象。  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Thread thread = <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable);</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<a id="more"></a>
 <ul>
 <li><p>3<br>  第三种可以使用内部类来实现。    这种方法比较难理解，但是也是用的最多的。</p>
   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Thread thread =  <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">           <span class="meta">@Override</span></span><br><span class="line">           <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">           &#125;</span><br><span class="line">   &#125;)</span><br></pre></td></tr></table></figure>
@@ -368,7 +369,7 @@
 <p>我们知道线程本身就是异步操作，为了解决上面的问题，我们就应该让线程进行同步操作<br>这里就得使用一个叫synchronized的关键字</p>
 <h4 id="synchronized-“锁”"><a href="#synchronized-“锁”" class="headerlink" title="synchronized(“锁”)"></a>synchronized(“锁”)</h4><p>这里的锁是一个对象，并且它可以使任意类型的对象。synchronized可以给方法上锁。如<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">xxxx</span><span class="params">()</span></span>&#123;&#125;</span><br></pre></td></tr></table></figure></p>
 <p>那么使用该方法的对象是当前类的类对象，比如这个类是Hello，那么这个对象就是Hello.class.</p>
-<h4 id="它的作用？"><a href="#它的作用？" class="headerlink" title="它的作用？"></a>它的作用？</h4><p>当一个线程进入到一个上锁的方法是就会持有这个锁对象。当其他的线程想要进入这个方法的时候，找不到锁对象，就只能等待，知道上一个线程执行完毕之后，释放了锁对象，下一个对象才能进入，这也就实现了<em>同步</em>。</p>
+<h4 id="它的作用？"><a href="#它的作用？" class="headerlink" title="它的作用？"></a>它的作用？</h4><p>当一个线程进入到一个上锁的方法是就会持有这个锁对象。当其他的线程想要进入这个方法的时候，找不到锁对象，就只能等待，知道上一个线程执行完毕之后，释放了锁对象，下一个对象才能进入，这也就实现了<strong>同步</strong>。</p>
 <blockquote>
 <p>对象是所有事物的抽象。<br>万物皆对象。</p>
 </blockquote>
@@ -404,15 +405,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/12/08/游戏开始/" rel="next" title="游戏开始">
+                <i class="fa fa-chevron-left"></i> 游戏开始
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/12/08/游戏开始/" rel="prev" title="游戏开始">
-                游戏开始 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -572,7 +573,7 @@
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">齐天大圣</span>
 
@@ -580,7 +581,7 @@
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+  <div class="powered-by">github.com/learnen</div>
 
 
 
@@ -588,7 +589,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+  <div class="theme-info">github.com/learnen</div>
 
 
 

@@ -252,6 +252,162 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/08/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="齐天大圣">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="唯一的世界">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/08/hello-world/" itemprop="url">Java 线程</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-08T21:51:53+08:00">
+                2017-12-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+<p>在电脑程序中，cpu会同时执行多个进程，也就是所谓的程序，线程是程序的执行单元，一个线程可以有多个进程。ps 说了这么多都是废话</p>
+</blockquote>
+<h3 id="一、-如何创建一个线程"><a href="#一、-如何创建一个线程" class="headerlink" title="一、 如何创建一个线程"></a>一、 如何创建一个线程</h3><ul>
+<li>1<br>  可以创建一个Thread的子类(如：HelloThread)，然后通过下面这种方法创建一个线程对象  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Thread thread = <span class="keyword">new</span> HelloThread();</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>2<br>  创建一个Runnable的实现类(如：HelloRunnable),就样也可以创建一个线程对象。  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Thread thread = <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/12/08/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/08/游戏开始/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -363,177 +519,6 @@
 <li><p>4<br>  第四种其实与第三种基本可以说相同。</p>
   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Thread  thread = <span class="keyword">new</span> Thread()&#123;</span><br><span class="line">      	<span class="meta">@Override</span></span><br><span class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">           <span class="keyword">super</span>.run();</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/08/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="齐天大圣">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/1.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="唯一的世界">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/08/hello-world/" itemprop="url">Java 线程</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-08T21:51:53+08:00">
-                2017-12-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习/" itemprop="url" rel="index">
-                    <span itemprop="name">学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
-<p>在电脑程序中，cpu会同时执行多个进程，也就是所谓的程序，线程是程序的执行单元，一个线程可以有多个进程。ps 说了这么多都是废话</p>
-</blockquote>
-<h3 id="一、-如何创建一个线程"><a href="#一、-如何创建一个线程" class="headerlink" title="一、 如何创建一个线程"></a>一、 如何创建一个线程</h3><ul>
-<li>1<br>  可以创建一个Thread的子类(如：HelloThread)，然后通过下面这种方法创建一个线程对象  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Thread thread = <span class="keyword">new</span> HelloThread();</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li>2<br>  创建一个Runnable的实现类(如：HelloRunnable),就样也可以创建一个线程对象。  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Thread thread = <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li><p>3<br>  第三种可以使用内部类来实现。    这种方法比较难理解，但是也是用的最多的。</p>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Thread thread =  <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">           <span class="meta">@Override</span></span><br><span class="line">           <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">           &#125;</span><br><span class="line">   &#125;)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>4<br>  第四种其实与第三种基本可以说相同。</p>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Thread  thread = <span class="keyword">new</span> Thread()&#123;</span><br><span class="line">      	<span class="meta">@Override</span></span><br><span class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">           <span class="keyword">super</span>.run();</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="二、如何让一个线程开启"><a href="#二、如何让一个线程开启" class="headerlink" title="二、如何让一个线程开启"></a>二、如何让一个线程开启</h3><p>这个就比较简单了，直接使用start方法就行了<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">thread.start();</span><br></pre></td></tr></table></figure></p>
-<h4 id="注：可以通过Thread的静态方法currentThread获得当前正在执行的线程对象，并且可"><a href="#注：可以通过Thread的静态方法currentThread获得当前正在执行的线程对象，并且可" class="headerlink" title="注：可以通过Thread的静态方法currentThread获得当前正在执行的线程对象，并且可"></a>注：可以通过Thread的静态方法currentThread获得当前正在执行的线程对象，并且可</h4><h4 id="以通过getName方法获得名字。"><a href="#以通过getName方法获得名字。" class="headerlink" title="以通过getName方法获得名字。"></a>以通过getName方法获得名字。</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Thread.currentThread().getName();</span><br></pre></td></tr></table></figure>
-<h3 id="三、线程的执行顺序"><a href="#三、线程的执行顺序" class="headerlink" title="三、线程的执行顺序"></a>三、线程的执行顺序</h3><p>线程的抢占式的执行，在程序中的线程会共同去抢夺cpu的执行权，所以是多个线程同时进行的。</p>
-<h4 id="由于线程的操作是同时进行的，所以当多个线程一起操作同一个目标的时候，就容易出现问题。"><a href="#由于线程的操作是同时进行的，所以当多个线程一起操作同一个目标的时候，就容易出现问题。" class="headerlink" title="由于线程的操作是同时进行的，所以当多个线程一起操作同一个目标的时候，就容易出现问题。"></a>由于线程的操作是同时进行的，所以当多个线程一起操作同一个目标的时候，就容易出现问题。</h4><p>-同步： 这里的线程就是同步操作，也就是一起进行。<br>-异步：    让先执行的执行完毕之后，后面的才继续执行。</p>
-<p>我们知道线程本身就是异步操作，为了解决上面的问题，我们就应该让线程进行同步操作<br>这里就得使用一个叫synchronized的关键字</p>
-<h4 id="synchronized-“锁”"><a href="#synchronized-“锁”" class="headerlink" title="synchronized(“锁”)"></a>synchronized(“锁”)</h4><p>这里的锁是一个对象，并且它可以使任意类型的对象。synchronized可以给方法上锁。如<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">xxxx</span><span class="params">()</span></span>&#123;&#125;</span><br></pre></td></tr></table></figure></p>
-<p>那么使用该方法的对象是当前类的类对象，比如这个类是Hello，那么这个对象就是Hello.class.</p>
-<h4 id="它的作用？"><a href="#它的作用？" class="headerlink" title="它的作用？"></a>它的作用？</h4><p>当一个线程进入到一个上锁的方法是就会持有这个锁对象。当其他的线程想要进入这个方法的时候，找不到锁对象，就只能等待，知道上一个线程执行完毕之后，释放了锁对象，下一个对象才能进入，这也就实现了<em>同步</em>。</p>
-<blockquote>
-<p>对象是所有事物的抽象。<br>万物皆对象。</p>
-</blockquote>
 
           
         
@@ -682,7 +667,7 @@
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">齐天大圣</span>
 
@@ -690,7 +675,7 @@
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+  <div class="powered-by">github.com/learnen</div>
 
 
 
@@ -698,7 +683,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+  <div class="theme-info">github.com/learnen</div>
 
 
 
